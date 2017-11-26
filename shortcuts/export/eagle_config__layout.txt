@@ -1,0 +1,30 @@
+grid = layout_mm        mm   1      5 lines alt mm   0.1   ;
+grid = layout_zoll      inch 0.025  8 lines alt inch 0.0125;
+grid = layout_zoll_fein inch 0.0125 8 lines alt inch 0.0125;
+grid = layout_on on  ;
+grid = layout_off off;
+display = layout_alles              None 17 18 19 20    1 21 23 25 37 51 16 22 24 26 38 52 ?? 2 4;
+display = layout_top                None 17 18 19 20    1 21 23 25 37 51                         ;
+display = layout_bottom             None 17 18 19 20                     16 22 24 26 38 52       ;
+display = layout_print_top          None 17 18    20    1                                        ;
+display = layout_print_bottom       None 17 18    20                     16                      ;
+display = layout_print_parts_top    None 17 18    20 47   21    25    51                         ;
+display = layout_print_parts_bottom None 17 18    20 47                     22    26    52       ;
+assign F2   'window fit;';
+assign A+F2 'window;'    ;
+assign F3   'window 2;'  ;
+assign F4   'window 0.5;';
+assign F5   'grid layout_mm;'       ;
+assign F6   'grid;'                 ;
+assign F7   'grid layout_zoll;'     ;
+assign F8   'grid layout_zoll_fein;';
+
+assign F9  'set palette black; set palette 7 0xB4C8C8C8; display layout_alles;' ;
+assign F10 'set palette black; set palette 7 0xB4C8C8C8; display layout_alles;' ;
+assign F11 'set palette black; set palette 7 0xB4C8C8C8; display layout_top;'   ;
+assign F12 'set palette black; set palette 7 0xB4C8C8C8; display layout_bottom;';
+
+assign S+F9  'set palette white; set palette 7 0xFF000000; display layout_print_parts_top;'   ;
+assign S+F10 'set palette white; set palette 7 0xFF000000; display layout_print_parts_bottom;';
+assign S+F11 'set palette white; set palette 7 0xFF000000; display layout_print_top;'         ;
+assign S+F12 'set palette white; set palette 7 0xFF000000; display layout_print_bottom;'      ;
